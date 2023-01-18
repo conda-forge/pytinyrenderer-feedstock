@@ -14,7 +14,7 @@ source:
     - devendor.patch
 
 build:
-  script: rm -rf third_party && {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv
   number: 1
 
 requirements:
