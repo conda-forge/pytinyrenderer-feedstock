@@ -52,3 +52,29 @@ index 3f1db39..53a1243 100644
  IF (WIN32)
    TARGET_COMPILE_OPTIONS(pytinyrenderer PUBLIC -bigobj)
 
+diff --git a/MANIFEST.in b/MANIFEST.in
+index 422a6e1..c528a37 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -2,7 +2,6 @@ include MANIFEST.in *.txt *.h
+ recursive-include examples *.h
+ recursive-include examples *.cpp
+ recursive-include python *.*
+-recursive-include third_party/pybind11 *.*
+ include .
+ geometry.h
+ model.h
+diff --git a/setup.py b/setup.py
+index 05104ac..852bf43 100644
+--- a/setup.py
++++ b/setup.py
+@@ -90,7 +90,7 @@ def _single_compile(obj):
+ # libraries += [current_python]
+ 
+ libraries = []
+-include_dirs = ['.','python', 'third_party/pybind11/include']
++include_dirs = ['.','python']
+ 
+ 
+ try:
+ 
