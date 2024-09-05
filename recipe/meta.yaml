@@ -15,7 +15,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -29,6 +29,7 @@ requirements:
     - pybind11                               # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - cmake
     - pkg-config
@@ -36,6 +37,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - pybind11
     - pybind11-abi
     - numpy
