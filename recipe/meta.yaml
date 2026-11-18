@@ -15,7 +15,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 5
+  number: 6
 
 requirements:
   build:
@@ -32,7 +32,7 @@ requirements:
     - {{ stdlib('c') }}
     - {{ compiler('cxx') }}
     - cmake
-    - pkg-config
+    - pkgconf
     - ninja
   host:
     - python
